@@ -9,7 +9,7 @@ class NeatlineTimeTimelineTable extends Omeka_Db_Table {
      * @param boolean Whether to retrieve only public timelines.
      * @return void
      */
-    public function filterByPublic($select, $isPublic)
+    public function filterByPublic(Omeka_Db_Select $select, $isPublic)
     {
         $isPublic = (bool) $isPublic;
 
@@ -26,7 +26,7 @@ class NeatlineTimeTimelineTable extends Omeka_Db_Table {
      * @param Zend_Db_Select
      * @param boolean Whether to retrieve only featured timelines.
      */
-    public function filterByFeatured($select, $isFeatured)
+    public function filterByFeatured(Omeka_Db_Select $select, $isFeatured)
     {
         $isFeatured = (bool) $isFeatured;
 
@@ -43,7 +43,7 @@ class NeatlineTimeTimelineTable extends Omeka_Db_Table {
      * @param Zend_Db_Select
      * @param boolean Whether to retrieve only featured timelines.
      */
-    public function filterByUser($select, $userId)
+    public function filterByUser(Omeka_Db_Select $select, $userId, $userField)
     {
         $userId = (int) $userId;
 
